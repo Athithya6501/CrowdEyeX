@@ -562,7 +562,6 @@ def main():
     print("Exiting.")
 
 
-# helper reused
 def compute_world_coords(points_image, H):
     pts = np.array(points_image, dtype=np.float32).reshape(-1,1,2)
     wrld = cv2.perspectiveTransform(pts, H).reshape(-1,2)
