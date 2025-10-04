@@ -87,6 +87,11 @@ dist-clean: clean
 	@echo "==> Removing model files $(PROTO) $(MODEL) and calib.json"
 	@rm -f $(PROTO) $(MODEL) $(CALIB) || true
 
+push:
+	git add .
+	git commit -m "new"
+	git push origin main --force
+	
 help:
 	@sed -n '1,200p' Makefile
 	@echo ""
